@@ -12,7 +12,7 @@ void main() {
         // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => LoginSignup(),
         // When navigating to the "/second" route, build the SecondScreen widget.
-        '/second': (context) => SecondScreen(),
+
         '/Login' : (context) => Login(),
         '/Signup' : (context) => Signup(),
         '/Home' : (context) => Home(),
@@ -84,27 +84,7 @@ class LoginSignup extends StatelessWidget {
   }
 }
 
-class SecondScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Second Screen'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          // Within the SecondScreen widget
-          onPressed: () {
-            // Navigate back to the first screen by popping the current route
-            // off the stack.
-            Navigator.pop(context);
-          },
-          child: Text('Go back!'),
-        ),
-      ),
-    );
-  }
-}
+
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
